@@ -85,9 +85,26 @@
     }
     .socials a {
       margin: 0 1rem;
-      color: #d4af37;
       text-decoration: none;
       font-size: 1.5rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      filter:
+        brightness(0) saturate(100%) invert(82%) sepia(53%) saturate(749%) hue-rotate(13deg) brightness(103%) contrast(92%);
+      /* Coloriza la imagen al dorado */
+      /* Glow dorado */
+      filter:drop-shadow(0 0 8px #d4af37) drop-shadow(0 0 10px #d4af37)
+        brightness(0) saturate(70%) invert(68%) sepia(53%) saturate(749%) hue-rotate(13deg) brightness(103%) contrast(92%);
+      transition: transform 0.2s;
+    }
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+    .instagram-icon {
+      width: 50px;
     }
   </style>
 </head>
@@ -102,11 +119,11 @@
     </div>
   </nav>
 
-  <header id="title">Benvinguda a Gretty Manicura</header>
+  <header id="title">Gretty Manicura</header>
 
   <section class="section">
     <p id="description">Servei professional de manicura i bellesa per a tu.</p>
-    <button class="btn" id="bookButton" onclick="window.open('https://booksy.com/es-es/77517_gretty-manicura_salon-de-unas_49363_sabadell?hl=es-ES&gei=fT3AaNH7F_moxc8PpMDW6Ac&rwg_token=ACgRB3cQpDxxngiwhUIADlKmHCMiwlgmk4g17OBwSLMSFM_tgpriBc2vHq4og4N8RcekKIKPW1AYFT7N66kcR_R32OLjXhZCdw%3D%3D#ba_s=seo', '_blank')">Reserva la teva cita</button>
+    <button class="btn" id="bookButton" onclick="window.open('https://booksy.com/es-es/77517_gretty-manicura_salon-de-unas_49363_sabadell?hl=es-ES&gei=fT3AaNH7F_moxc8PpMDW6Ac&rwg_token=ACgRB3cQpDxxngiwhUIADlKmHCMiwlgmk4g17OBwSLMSFM_tgpriBc2vHq4og4N8RcekKIKPW1AYFT7N66kcR_R32OLjXhZCdw%3D%3D#ba_s=seo', '_blank')">RESERVA</button>
   </section>
 
   <section class="section">
@@ -128,8 +145,12 @@
 
   <footer>
     <div class="socials">
-      <a href="https://www.instagram.com/grettymanicura" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@grettymanicura2011" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/grettymanicura" target="_blank">
+        <img src="instagram-logo.png" alt="Instagram" class="social-icon instagram-icon">
+      </a>
+      <a href="https://www.tiktok.com/@grettymanicura2011" target="_blank">
+        <img src="tiktok-logo.png" alt="TikTok" class="social-icon">
+      </a>
     </div>
     <p>&copy; 2025 Gretty Manicura. Tots els drets reservats.</p>
   </footer>
@@ -144,7 +165,7 @@
       if (lang === 'es') {
         document.getElementById('title').innerText = 'Gretty Manicura';
         document.getElementById('description').innerText = 'Servicio profesional de manicura y belleza para ti.';
-        document.getElementById('bookButton').innerText = 'Reserva tu cita';
+        document.getElementById('bookButton').innerText = 'RESERVA';
         document.getElementById('galleryTitle').innerText = 'Galería';
         document.getElementById('contactTitle').innerText = 'Contacto';
         document.getElementById('phoneLabel').innerHTML = 'Teléfono: <a href="tel:+34931877830" style="color:#d4af37">+34 931 877 830</a>';
@@ -152,7 +173,7 @@
       } else {
         document.getElementById('title').innerText = 'Gretty Manicura';
         document.getElementById('description').innerText = 'Servei professional de manicura i bellesa per a tu.';
-        document.getElementById('bookButton').innerText = 'Reserva la teva cita';
+        document.getElementById('bookButton').innerText = 'RESERVA';
         document.getElementById('galleryTitle').innerText = 'Galeria';
         document.getElementById('contactTitle').innerText = 'Contacte';
         document.getElementById('phoneLabel').innerHTML = 'Telèfon: <a href="tel:+34931877830" style="color:#d4af37">+34 931 877 830</a>';
