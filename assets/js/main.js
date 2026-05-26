@@ -60,16 +60,10 @@ const i18n = {
     'contacte.horari': 'Horari',
     'contacte.horari.val': 'Dilluns–Divendres: 9h – 19h<br>Dissabte: 9h – 15h',
     'contacte.xarxes': 'Xarxes socials',
-    'form.title': 'Demana cita',
-    'form.nom': 'Nom',
-    'form.tel': 'Telèfon',
-    'form.servei': 'Servei',
-    'form.sel': '— Selecciona —',
-    'form.data': 'Data preferida',
-    'form.msg': 'Comentaris',
-    'form.submit': 'Enviar sol·licitud',
-    'form.note': 'Et confirmarem la cita per telèfon o WhatsApp.',
-    'form.success': '✓ Cita sol·licitada! Et contactarem aviat.',
+    'booksy.title': 'Reserva la teva cita',
+    'booksy.text': 'Gestionem totes les cites a través de Booksy. Tria el servei, el dia i l\'hora en pocs segons.',
+    'booksy.cta': 'Reservar a Booksy →',
+    'booksy.note': 'O truca\'ns directament al +34 647 71 84 08.',
     'footer.tagline': 'Manicura professional a Sabadell. L\'art de cuidar-te a les mans d\'una experta.',
     'footer.rights': 'Tots els drets reservats.',
     'footer.top': '↑ Tornar amunt',
@@ -129,16 +123,10 @@ const i18n = {
     'contacte.horari': 'Horario',
     'contacte.horari.val': 'Lunes–Viernes: 9h – 19h<br>Sábado: 9h – 15h',
     'contacte.xarxes': 'Redes sociales',
-    'form.title': 'Pedir cita',
-    'form.nom': 'Nombre',
-    'form.tel': 'Teléfono',
-    'form.servei': 'Servicio',
-    'form.sel': '— Selecciona —',
-    'form.data': 'Fecha preferida',
-    'form.msg': 'Comentarios',
-    'form.submit': 'Enviar solicitud',
-    'form.note': 'Te confirmaremos la cita por teléfono o WhatsApp.',
-    'form.success': '✓ ¡Cita solicitada! Te contactaremos pronto.',
+    'booksy.title': 'Reserva tu cita',
+    'booksy.text': 'Gestionamos todas las citas a través de Booksy. Elige el servicio, el día y la hora en pocos segundos.',
+    'booksy.cta': 'Reservar en Booksy →',
+    'booksy.note': 'O llámanos directamente al +34 647 71 84 08.',
     'footer.tagline': 'Manicura profesional en Sabadell. El arte de cuidarte en manos de una experta.',
     'footer.rights': 'Todos los derechos reservados.',
     'footer.top': '↑ Volver arriba',
@@ -206,40 +194,8 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-const bookingForm = document.getElementById('booking-form');
-if (bookingForm) {
-  bookingForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nom = document.getElementById('f-nom').value.trim();
-    const tel = document.getElementById('f-tel').value.trim();
-    const servei = document.getElementById('f-servei').value;
-    if (!nom || !tel || !servei) {
-      showToast(currentLang === 'ca' ? 'Omple els camps obligatoris.' : 'Rellena los campos obligatorios.');
-      return;
-    }
-
-    this.style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-    showToast(currentLang === 'ca' ? '✓ Sol·licitud enviada!' : '✓ ¡Solicitud enviada!');
-  });
-}
-
-function showToast(msg) {
-  const toast = document.getElementById('toast');
-  if (!toast) return;
-  toast.textContent = msg;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3000);
-}
-
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-const dateInput = document.getElementById('f-data');
-if (dateInput) {
-  const today = new Date().toISOString().split('T')[0];
-  dateInput.min = today;
-}
 
 function scrollTo(sel) {
   document.querySelector(sel)?.scrollIntoView({ behavior: 'smooth' });
