@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria – Gretty Manicura Sabadell</title>
+
+  <meta name="description" content="Galeria de treballs de Gretty Manicura a Sabadell. Nail art, gel, semipermanent i molt més." />
+  <meta name="author" content="Gretty Manicura" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://grettymanicura.com/gallery/" />
+
+  <meta property="og:title" content="Galeria – Gretty Manicura Sabadell" />
+  <meta property="og:description" content="Galeria de treballs de Gretty Manicura a Sabadell." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://grettymanicura.com/gallery/" />
+  <meta property="og:image" content="https://grettymanicura.com/preview.jpg" />
+  <meta property="og:locale" content="ca_ES" />
+
+  <meta name="theme-color" content="#c9a87c" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💅</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+<header id="site-header" class="scrolled">
+  <div class="container">
+    <nav>
+      <a href="../" class="nav-logo">Gretty <span>Manicura</span></a>
+
+      <ul class="nav-links">
+        <li><a href="../#serveis" data-i18n="nav.serveis">Serveis</a></li>
+        <li><a href="../#galeria" data-i18n="nav.galeria">Galeria</a></li>
+        <li><a href="../#sobre" data-i18n="nav.sobre">Sobre</a></li>
+        <li><a href="../#ressenyes" data-i18n="nav.ressenyes">Ressenyes</a></li>
+        <li><a href="../#contacte" data-i18n="nav.contacte">Contacte</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-switch">
+          <button class="active" onclick="setLang('ca')">CA</button>
+          <button onclick="setLang('es')">ES</button>
+        </div>
+        <button class="btn-nav" onclick="location.href='../#contacte'" data-i18n="nav.reserva">Reserva</button>
+        <button class="hamburger" id="ham" aria-label="Menú" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="../#serveis" onclick="toggleMenu()" data-i18n="nav.serveis">Serveis</a>
+  <a href="../#galeria" onclick="toggleMenu()" data-i18n="nav.galeria">Galeria</a>
+  <a href="../#sobre" onclick="toggleMenu()" data-i18n="nav.sobre">Sobre</a>
+  <a href="../#ressenyes" onclick="toggleMenu()" data-i18n="nav.ressenyes">Ressenyes</a>
+  <a href="../#contacte" onclick="toggleMenu()" data-i18n="nav.contacte">Contacte</a>
+  <div class="lang-switch">
+    <button class="active" onclick="setLang('ca')">CA</button>
+    <button onclick="setLang('es')">ES</button>
+  </div>
+</div>
+
+<section id="galeria" class="page-offset">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <p class="section-tag" data-i18n="galeria.tag">El nostre treball</p>
+      <h2 class="section-title" data-i18n-html="galeria.title">Cada ungle,<br>una <em>obra d'art</em></h2>
+      <p class="gallery-intro" data-i18n="galeria.intro">Una selecció dels nostres treballs. Cada disseny és únic, fet a mà amb cura i passió.</p>
+      <a class="gallery-back" href="../" data-i18n="galeria.tornar">← Tornar a l'inici</a>
+    </div>
+    <div class="gallery-full">
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <div class="gallery-img-inner">
+          <img src="../foto1.png" alt="Nail art floral" loading="lazy" />
+        </div>
+        <div class="gallery-overlay"><span class="gallery-overlay-txt">Nail Art Floral</span></div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <div class="gallery-img-inner">
+          <img src="../foto2.png" alt="Gel ombré" loading="lazy" />
+        </div>
+        <div class="gallery-overlay"><span class="gallery-overlay-txt">Gel Ombré</span></div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <div class="gallery-img-inner">
+          <img src="../foto3.png" alt="Semipermanent" loading="lazy" />
+        </div>
+        <div class="gallery-overlay"><span class="gallery-overlay-txt">Semipermanent</span></div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <div class="gallery-img-inner">
+          <img src="../foto4.png" alt="Nail Art geomètric" loading="lazy" />
+        </div>
+        <div class="gallery-overlay"><span class="gallery-overlay-txt">Art Geomètric</span></div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <div class="gallery-img-inner">
+          <img src="../foto5.png" alt="Disseny d'ungles" loading="lazy" />
+        </div>
+        <div class="gallery-overlay"><span class="gallery-overlay-txt">Disseny d'ungles</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" aria-label="Tancar">✕</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Gretty Manicura. <span data-i18n="footer.rights">Tots els drets reservats.</span></span>
+      <span><a href="../" data-i18n="galeria.tornar">← Tornar a l'inici</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
