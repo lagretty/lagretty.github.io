@@ -232,8 +232,8 @@ nav {
   position: absolute;
   z-index: 2;
   top: 50%;
-  right: 15%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero-logo {
@@ -650,7 +650,6 @@ footer {
   .hero-deco { display: none; }
   .hero-blob { width: 280px; max-width: 80vw; }
   .hero-logo { width: 200px; max-width: 55vw; }
-  .hero-logo-wrap { right: auto; left: 50%; transform: translate(-50%, -50%); }
   .services-header { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
